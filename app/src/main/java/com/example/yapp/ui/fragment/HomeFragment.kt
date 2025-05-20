@@ -8,14 +8,10 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.yapp.data.entity.ToDo
 import com.example.yapp.databinding.FragmentHomeBinding
 import com.example.yapp.ui.adapter.YappAdapter
 import com.example.yapp.ui.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {

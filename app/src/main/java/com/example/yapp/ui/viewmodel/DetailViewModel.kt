@@ -1,7 +1,6 @@
 package com.example.yapp.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.yapp.data.repository.ToDoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope

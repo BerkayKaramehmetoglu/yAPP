@@ -21,7 +21,11 @@
         android:id="@+id/createFragment"
         android:name="com.example.yapp.ui.fragment.CreateFragment"
         android:label="fragment_create"
-        tools:layout="@layout/fragment_create" />
+        tools:layout="@layout/fragment_create" >
+        <action
+            android:id="@+id/create_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.yapp.ui.fragment.DetailFragment"
@@ -30,5 +34,8 @@
         <argument
             android:name="todo"
             app:argType="com.example.yapp.data.entity.ToDo" />
+        <action
+            android:id="@+id/detail_to_home"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

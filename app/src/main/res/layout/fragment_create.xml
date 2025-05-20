@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:checked="true"
-                android:text="Is It Active?"
+                android:text="Is it over?"
                 android:textColor="#1B1C1F"
                 android:textSize="24sp"
                 app:thumbTint="@color/switch_thumb_color"

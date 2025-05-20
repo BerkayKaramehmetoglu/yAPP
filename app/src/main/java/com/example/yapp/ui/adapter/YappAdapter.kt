@@ -3,7 +3,6 @@ package com.example.yapp.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yapp.R
 import com.example.yapp.data.entity.ToDo

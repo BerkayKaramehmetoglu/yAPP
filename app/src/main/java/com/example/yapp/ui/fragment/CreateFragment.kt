@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import com.example.yapp.R
 import com.example.yapp.databinding.FragmentCreateBinding
 import com.example.yapp.ui.viewmodel.CreateViewModel
-import com.example.yapp.ui.viewmodel.HomeViewModel
 import com.example.yapp.util.getCurrentTime
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,11 +28,13 @@ class CreateFragment : Fragment() {
         binding.createBtn.setOnClickListener {
             val titleEdtTxt = binding.titleEdtTxt.text.toString()
             val descEdtTxt = binding.descEdtTxt.text.toString()
-            val active = binding.materialSwitch.isActivated
+            val active = binding.materialSwitch.isChecked
 
             viewModel.create(titleEdtTxt, descEdtTxt, active, getCurrentTime())
-        }
+            Snackbar.make(it, "Created yAPP", Snackbar.LENGTH_SHORT).show()
 
+            it.findNavController().navigate(R.id.create_to_home)
+        }
         return binding.root
     }
 
