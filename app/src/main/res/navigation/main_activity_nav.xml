@@ -26,5 +26,9 @@
         android:id="@+id/detailFragment"
         android:name="com.example.yapp.ui.fragment.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="todo"
+            app:argType="com.example.yapp.data.entity.ToDo" />
+    </fragment>
 </navigation>

@@ -9,6 +9,7 @@ import com.example.yapp.R
 import com.example.yapp.data.entity.ToDo
 import com.example.yapp.databinding.CardDesignBinding
 import androidx.navigation.findNavController
+import com.example.yapp.ui.fragment.HomeFragmentDirections
 
 class YappAdapter(var context: Context, var toDoList: List<ToDo>) :
     RecyclerView.Adapter<YappAdapter.CardViewHolder>() {
@@ -41,7 +42,8 @@ class YappAdapter(var context: Context, var toDoList: List<ToDo>) :
         design.todoTime.text = toDoLists.todo_time
 
         design.cardView.setOnClickListener {
-            it.findNavController().navigate(R.id.home_to_detail)
+            val navigate = HomeFragmentDirections.homeToDetail(toDoLists)
+            it.findNavController().navigate(navigate)
         }
     }
 }
